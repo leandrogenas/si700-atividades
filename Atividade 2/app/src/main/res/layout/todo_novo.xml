@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NovoToDo"
+    android:background="#455A64">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"
+        android:layout_marginBottom="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="@color/colorSecundary"
+            android:textSize="40dp"
+            android:background="@drawable/rounded_logo"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="50dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_card"
+            android:hint="Qual é a sua tarefa?"
+            android:padding="10dp"
+            android:id="@+id/conteudo_todo"
+            />
+        <TextView
+            android:text="Prioridade"
+            android:textColor="@color/colorSecundary"
+            android:textSize="18dp"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:textColor="#FFFFFF">
+            <RadioGroup
+                android:id="@+id/prioridade_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/prior_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alta"
+                    android:textColor="#FFFFFF"/>
+                <RadioButton
+                    android:id="@+id/prior_med"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Média"
+                    android:textColor="#FFFFFF"/>
+                <RadioButton
+                    android:id="@+id/prior_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baixa"
+                    android:textColor="#FFFFFF"/>
+
+            </RadioGroup>
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/notificar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Notificar-me"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="40dp"/>
+
+        <Spinner
+            android:id="@+id/categorias"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_card"
+            android:layout_marginBottom="80dp"/>
+
+        <Button
+            android:id="@+id/salvar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Salvar"
+            android:background="@drawable/rounded_button"
+            android:textColor="#FFFFFF"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

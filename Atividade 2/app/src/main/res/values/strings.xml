@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TODO List</string>
+    <string name="title"><b>TODO</b> L i s t </string>
+    <string-array name="todo_category">
+        <item>Faculdade</item>
+        <item>Trabalho</item>
+        <item>Hobbies</item>
+    </string-array>
+
+    <string name="lbl_conteudo">Conteúdo</string>
+    <string name="lbl_prioridade">Prioridade</string>
+    <string name="lbl_notificar">Notificar?</string>
+    <string name="lbl_categoria">Categoria</string>
+
+    <string name="vlr_conteudo">...</string>
+    <string name="vlr_prioridade">...</string>
+    <string name="vlr_notificar">Sim / Não</string>
+    <string name="vlr_categoria">...</string>
+</resources>

@@ -12,4 +12,14 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="autor">Autor</string>
+    <string name="alunos">Alunos</string>
+    <string name="biografia">Biografia</string>
+    <string name="leandro">Leandro Fabri</string>
+    <string name="leandro_biografia">Vacilão desde a concepção, nasci em São Paulo e sempre gostei bastante de tecnologia e tudo o que a envolve, desde pequeno desmontando as coisas para entender como funcionavam, posso dizer que estou seguindo na área que gosto</string>
+
+    <string name="leonardo">Leonardo Davidiuk</string>
+    <string name="leonardo_biografia">Leonardo Davidiuk, nascido em São Paulo sempre tive interesse em tecnologia. Ingressei em Sistemas de Informação em 2017 na Unicamp. Hoje faço estágio com desenvolvimento front end</string>
+    <string name="mail">Mail</string>
 </resources>

@@ -44,4 +44,10 @@ public class Aluno {
         return null;
     }
 
+    @Override
+    public boolean equals(Object o)
+    {
+        return ((Aluno) o).getNome().equals(this.getNome());
+    }
+
 }

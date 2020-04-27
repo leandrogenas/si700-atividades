@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import br.unicamp.ft.l201039_l201253.atividade5.R;
 
 public class MyFirstAdapter extends RecyclerView.Adapter {
 
+    private MyFirstAdapter teste;
     private ArrayList<Aluno> alunos;
     public MyFirstAdapter(ArrayList alunos){
         this.alunos = alunos;
@@ -29,21 +31,22 @@ public class MyFirstAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
+        teste = this;
         View view = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.adapter_layout, parent, false);
 
+        view.setOnLongClickListener(new View.OnLongClickListener(){
+                                    @Override
+                                    public boolean onLongClick(View v) {
+                                        v.setVisibility(View.GONE);
+                                        ViewGroup.LayoutParams params = v.getLayoutParams();
+                                        params.height = 0;
+                                        v.setLayoutParams(params);
 
-//        view.setOnClickListener(new View.OnClickListener(){
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        if (myFirstAdapterOnItemClickListener != null){
-//                                            TextView txt = v.findViewById(R.id.text_view);
-//                                            myFirstAdapterOnItemClickListener.myFirstAdapterOnItemClick(txt.getText().toString());
-//                                        }
-//                                       // Toast.makeText(parent.getContext(), "ASDF", Toast.LENGTH_SHORT).show();
-//                                    }
-//                                }
-//        );
+                                        return true;
+                                    }
+                                }
+        );
 
         return new MyFirstViewHolder(view);
     }

@@ -24,9 +24,11 @@
     <string name="mail">Mail</string>
 
     <string name="nome_description">Imagem do Aluno</string>
+    <string name="idade">%d anos</string>
+    <string name="nome">Nome</string>
 
     <string-array name="nomes">
-        <item>Arthur Briganti Gini,0,0</item>
+        <item>Arthur Briganti Gini,20,1</item>
         <item>Arthur Guedes De Souza,21,0</item>
         <item>Brenda Cristina De Souza Silva,0,1</item>
         <item>Bruno Adegas,20,2</item>

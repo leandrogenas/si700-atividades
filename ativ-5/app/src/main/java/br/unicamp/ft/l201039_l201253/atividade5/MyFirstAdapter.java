@@ -1,9 +1,11 @@
 package br.unicamp.ft.l201039_l201253.atividade5;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,17 +33,17 @@ public class MyFirstAdapter extends RecyclerView.Adapter {
                 R.layout.adapter_layout, parent, false);
 
 
-        view.setOnClickListener(new View.OnClickListener(){
-                                    @Override
-                                    public void onClick(View v) {
-                                        if (myFirstAdapterOnItemClickListener != null){
-                                            TextView txt = v.findViewById(R.id.text_view);
-                                            myFirstAdapterOnItemClickListener.myFirstAdapterOnItemClick(txt.getText().toString());
-                                        }
-                                       // Toast.makeText(parent.getContext(), "ASDF", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-        );
+//        view.setOnClickListener(new View.OnClickListener(){
+//                                    @Override
+//                                    public void onClick(View v) {
+//                                        if (myFirstAdapterOnItemClickListener != null){
+//                                            TextView txt = v.findViewById(R.id.text_view);
+//                                            myFirstAdapterOnItemClickListener.myFirstAdapterOnItemClick(txt.getText().toString());
+//                                        }
+//                                       // Toast.makeText(parent.getContext(), "ASDF", Toast.LENGTH_SHORT).show();
+//                                    }
+//                                }
+//        );
 
         return new MyFirstViewHolder(view);
     }
@@ -76,18 +78,25 @@ public class MyFirstAdapter extends RecyclerView.Adapter {
 
 
     static class MyFirstViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imageView;
-        private TextView  textView;
+        private ImageView foto;
+        private TextView nome;
+        private TextView idade;
 
         public MyFirstViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.image_view);
-            textView  = itemView.findViewById(R.id.text_view);
+            foto = itemView.findViewById(R.id.foto);
+            nome = itemView.findViewById(R.id.nome);
+            idade = itemView.findViewById(R.id.idade);
+
         }
 
         public void bind(Aluno aluno){
-            imageView.setImageResource(aluno.getFoto());
-            textView.setText(aluno.getNome());
+            foto.setImageResource(aluno.getFoto());
+            nome.setText(aluno.getNome());
+            idade.setText(aluno.getIdade() + " anos");
+            if(aluno.getTipo() == 1)
+                itemView.findViewById(R.id.linha)
+                    .setBackgroundColor(Color.parseColor("#00bcd4"));
         }
     }
 }
